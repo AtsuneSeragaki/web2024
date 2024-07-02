@@ -41,9 +41,6 @@ function janken()
 
     function getHandName(num)
     {
-        //コンピュータの手を文字列として格納する変数「comHandName」を宣言。初期化のために0を代入
-        var comHandName = 0;
-
         //switch文で、コンピュータの手を判定する
         switch(num)
         {
