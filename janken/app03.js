@@ -97,7 +97,29 @@ function janken()
     {
         var com = getComHand();
         alert(getResultMsg(com,hum));
+        return getResult(com,hum);
     }
 }
 
-janken();
+let win = 0;
+let isLose = false;
+while(!isLose)
+{
+    let result = janken();
+
+    if(result == '結果は「あいこ」。')
+    {
+        continue; // while文の先頭にジャンプ
+    }
+
+    if(result == '勝ったぞ、やったね')
+    {
+        win++;
+        alert('ただいま「' + win + '」勝です。');
+        continue; // while文の先頭にジャンプ
+    }
+    
+    alert('連勝はストップです。記録は「' + win + '」勝でした。');
+    isLose = true;
+
+}
