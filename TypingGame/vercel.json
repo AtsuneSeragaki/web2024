@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/TypingGame", "destination": "/TypingGame.html" }
+  ],
+  "outputDirectory": "."
+}
